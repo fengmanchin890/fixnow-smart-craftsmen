@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import TechStack from '@/components/TechStack';
+import InteractiveDemo from '@/components/InteractiveDemo';
+import AppFeatures from '@/components/AppFeatures';
 import DemoSection from '@/components/DemoSection';
 import Footer from '@/components/Footer';
 
@@ -13,6 +15,8 @@ const Index = () => {
       <Header />
       <Hero />
       <Features />
+      <InteractiveDemo />
+      <AppFeatures />
       <TechStack />
       <DemoSection />
       <Footer />

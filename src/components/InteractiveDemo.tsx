@@ -14,6 +14,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const InteractiveDemo = () => {
   const [activeFeature, setActiveFeature] = useState<string | null>(null);
@@ -76,6 +77,9 @@ const InteractiveDemo = () => {
       available: false
     }
   ];
+
+  const [activeFeature, setActiveFeature] = useState<string | null>(null);
+  const [isMatching, setIsMatching] = useState(false);
 
   const triggerFeature = (featureId: string) => {
     setActiveFeature(featureId);
@@ -180,14 +184,15 @@ const InteractiveDemo = () => {
         {/* Quick Action Buttons */}
         <div className="text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            <Button 
-              size="lg" 
-              className="bg-primary-600 hover:bg-primary-700 h-16"
-              onClick={() => triggerFeature('ai-matching')}
-            >
-              <Smartphone className="mr-2 h-5 w-5" />
-              立即叫修
-            </Button>
+            <Link to="/service-request">
+              <Button 
+                size="lg" 
+                className="bg-primary-600 hover:bg-primary-700 h-16 w-full"
+              >
+                <Smartphone className="mr-2 h-5 w-5" />
+                立即叫修
+              </Button>
+            </Link>
             <Button 
               variant="outline" 
               size="lg" 

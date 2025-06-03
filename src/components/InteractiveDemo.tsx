@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -77,9 +76,6 @@ const InteractiveDemo = () => {
       available: false
     }
   ];
-
-  const [activeFeature, setActiveFeature] = useState<string | null>(null);
-  const [isMatching, setIsMatching] = useState(false);
 
   const triggerFeature = (featureId: string) => {
     setActiveFeature(featureId);
